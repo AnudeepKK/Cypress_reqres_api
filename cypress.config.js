@@ -1,10 +1,13 @@
 const { defineConfig } = require("cypress");
+const mochawesome = require("mochawesome");
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      return config
+      // Adding mochawesome reporter for generating reports
+      require("cypress-mochawesome-reporter/plugin")(on);
+      return config;
     },
-    specPattern:"cypress//Integration//APItest//*.cy.js"
+    specPattern: "cypress/integration/APItest/*.cy.js", // Corrected path with single slashes
   },
 });
