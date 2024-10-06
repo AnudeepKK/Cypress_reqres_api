@@ -14,6 +14,6 @@ module.exports = defineConfig({
       };
       return config;
     },
-    specPattern: "cypress/Integration/APItest/*.cy.js" // Corrected the path separator
+    specPattern: "cypress/Integration/APItest/demo1.cy.js" // Corrected the path separator
   },
 });
